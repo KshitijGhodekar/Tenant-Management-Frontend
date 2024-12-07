@@ -1,0 +1,133 @@
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7fa;
+  }
+  
+  .loginImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .loginImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    max-height: 900px; 
+  }
+  
+  .loginForm {
+    flex: 1;
+    margin: 2em;
+    max-width: 400px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formHeader {
+    text-align: center;
+    margin-bottom: 30px;
+  
+    h2 {
+      font-size: 24px;
+      color: #333;
+    }
+  
+    p {
+      color: #888;
+      font-size: 14px;
+    }
+  }
+  
+  .inputGroup {
+    margin-bottom: 20px;
+  }
+  
+  .inputGroup label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .inputGroup input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .inputGroup input:focus {
+    border-color: #007bff;
+  }
+  
+  .loginButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .loginButton,
+  .googleSignIn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .loginButton {
+    background-color: #007bff;
+    color: #fff;
+  
+    &:hover {
+      background-color: #0056b3;
+    }
+  
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+  
+  .googleSignIn {
+    background-color: #db4437;
+    color: #fff;
+  
+    &:hover {
+      background-color: #c1351d;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .loginPage {
+      flex-direction: column;
+    }
+  
+    .loginImage {
+      flex: 0;
+      margin-bottom: 30px;
+    }
+  
+    .loginForm {
+      width: 90%;
+      padding: 20px;
+    }
+  }
+  

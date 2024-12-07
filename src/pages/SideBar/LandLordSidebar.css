@@ -1,0 +1,88 @@
+/* SideBar.css */
+.sidebarWrapper {
+  position: fixed;
+  height: 100%;
+  width: 60px;
+  transition: 0.3s;
+}
+
+.sidebarWrapper.open {
+  width: 200px;
+}
+
+.sidebarContainer {
+  height: 100%;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebarItem {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebarItem:hover {
+  background-color: #34495e;
+}
+
+.sidebarItem .icon {
+  margin-right: 10px;
+}
+
+.dashboardContainer {
+  display: flex;
+  margin-left: 200px; /* Sidebar width */
+  padding: 20px;
+}
+
+.dashboardContent {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.addPropertyBtn {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.propertyList {
+  margin-top: 20px;
+}
+
+.propertyItem {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.propertyActions button {
+  margin-right: 10px;
+  padding: 8px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.propertyActions button:last-child {
+  background-color: #e74c3c;
+}

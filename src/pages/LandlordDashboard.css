@@ -1,0 +1,117 @@
+/* Dashboard Styling */
+.dashboardContainer {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0em;
+    padding: 1em;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+  }
+  
+  h2 {
+    font-size: 32px;
+    color: #2c3e50;
+  }
+  
+  .addPropertyBtn {
+    background-color: #27ae60;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .addPropertyBtn:hover {
+    background-color: #2ecc71;
+  }
+  
+  .dashboardContent {
+    margin-top: 30px;
+  }
+  
+  h3 {
+    font-size: 28px;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  .propertyList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .propertyItem {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .propertyItem:hover {
+    transform: translateY(-10px);
+  }
+  
+  .propertyActions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .propertyActions .btn {
+    width: 100%;
+  }
+  
+  .chartContainer {
+    margin-top: 40px !important;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .chartContainer h4 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styling */
+  .btn-outline-primary {
+    border: 1px solid #3498db;
+    color: #3498db;
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .btn-outline-danger {
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #e74c3c;
+    color: white;
+  }
+  

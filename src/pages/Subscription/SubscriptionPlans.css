@@ -1,0 +1,115 @@
+/* Main container for subscription plans */
+.subscriptionPlans {
+    padding: 40px 20px;
+    background-color: #f4f7fa;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  /* Title of the subscription section */
+  .subscriptionPlans h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Container for the plans */
+  .plansContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+  }
+  
+  /* Individual Plan Card */
+  .planCard {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  /* Hover effect for the plan card */
+  .planCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Plan name */
+  .planCard h3 {
+    font-size: 24px;
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  /* Plan price */
+  .planCard p {
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* List of features for each plan */
+  .planCard ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Feature items */
+  .planCard li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .planCard li::before {
+    content: "✔️";
+    margin-right: 8px;
+    color: #007bff;
+    font-size: 18px;
+  }
+  
+  /* Subscription button */
+  .planCard button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Button hover effect */
+  .planCard button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Loading & Error Messages */
+  .loading, .error {
+    font-size: 18px;
+    color: #ff4d4f;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
