@@ -82,6 +82,29 @@ const Sidebar = () => {
     fetchProperties();
   }, []);
 
+  const cleanPrice = (price) => {
+    return parseFloat(price.replace(/[^0-9.-]+/g, ""));
+  };
+  const calculateFinalPrice = (price, discount, vatRate) => {
+    const numericPrice = cleanPrice(price);
+    if (isNaN(numericPrice) || isNaN(discount)) {
+      return "Invalid price or discount";
+    }
+    const discountedPrice = numericPrice - numericPrice * discount;
+    const priceWithVAT = discountedPrice + discountedPrice * vatRate;
+    return priceWithVAT.toFixed(2);
+  };
+
+  const calculateVAT = (price, discount, vatRate) => {
+    const numericPrice = cleanPrice(price);
+    if (isNaN(numericPrice) || isNaN(discount)) {
+      return "Invalid price or discount";
+    }
+    const discountedPrice = numericPrice - numericPrice * discount;
+    const vatAmount = discountedPrice * vatRate;
+    return vatAmount.toFixed(2);
+  };
+
   return (
     <div className="mainContainer">
       <div className="menuButton" onClick={toggleSidebar}>
@@ -236,23 +259,66 @@ const Sidebar = () => {
               <CloseIcon />
             </IconButton>
           </DialogTitle>
-          <DialogContent>
+          <DialogContent style={{ padding: "20px", textAlign: "center" }}>
             <img
               src={popupData.src}
               alt={popupData.name}
-              style={{ width: "100%" }}
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: "8px",
+                marginBottom: "20px",
+              }}
             />
-            <p>
+
+            <h3 style={{ marginBottom: "15px" }}>{popupData.name}</h3>
+
+            <p style={{ fontSize: "16px", marginBottom: "10px" }}>
               <strong>Location:</strong> {popupData.location}
             </p>
-            <p>
-              <strong>Price:</strong> {popupData.price}
-              <span style={{ color: "red" }}>({popupData.discount}% Off)</span>
+
+            <p
+              style={{
+                fontSize: "18px",
+                marginBottom: "10px",
+                fontWeight: "bold",
+              }}
+            >
+              <strong>Original Price:</strong> <span>{popupData.price}</span>
             </p>
-            <p>
+
+            <p style={{ fontSize: "16px", marginBottom: "10px" }}>
+              <strong>Discount:</strong> {popupData.discount}% Off
+            </p>
+
+            <p style={{ fontSize: "16px", marginBottom: "10px" }}>
+              <strong>VAT (23%):</strong> €
+              {calculateVAT(popupData.price, popupData.discount / 100, 0.23)}
+            </p>
+
+            <p
+              style={{
+                fontSize: "18px",
+                marginBottom: "15px",
+                fontWeight: "bold",
+                color: "#4caf50",
+              }}
+            >
+              <strong>Final Price (with Discount & VAT):</strong> €
+              {calculateFinalPrice(
+                popupData.price,
+                popupData.discount / 100,
+                0.23
+              )}
+            </p>
+
+            <p style={{ fontSize: "16px", marginBottom: "10px" }}>
               <strong>Size:</strong> {popupData.size}
             </p>
-            <p>
+
+            <p
+              style={{ fontSize: "14px", marginBottom: "10px", color: "#777" }}
+            >
               <strong>Description:</strong> {popupData.description}
             </p>
           </DialogContent>

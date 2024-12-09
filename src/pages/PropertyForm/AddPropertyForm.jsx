@@ -1,10 +1,20 @@
 import React, { useState } from "react";
-import { TextField, Button, MenuItem, Select, InputLabel, FormControl, Checkbox, FormControlLabel } from "@mui/material";
+import {
+  TextField,
+  Button,
+  MenuItem,
+  Select,
+  InputLabel,
+  FormControl,
+  Checkbox,
+  FormControlLabel,
+} from "@mui/material";
 import "./AddPropertyForm.css";
 
 const AddPropertyForm = () => {
   const [formData, setFormData] = useState({
     address: "",
+    propertyTitle: "",
     price: "",
     type: "",
     bedrooms: "",
@@ -27,7 +37,6 @@ const AddPropertyForm = () => {
     try {
       console.log("Property Submitted:", formData);
 
-      // Clear the form after submit
       setFormData({
         address: "",
         price: "",
@@ -50,6 +59,16 @@ const AddPropertyForm = () => {
         name="address"
         variant="outlined"
         value={formData.address}
+        onChange={handleInputChange}
+        className="formField"
+        fullWidth
+      />
+
+      <TextField
+        label="Property Title"
+        name="propertyTitle"
+        variant="outlined"
+        value={formData.propertyTitle}
         onChange={handleInputChange}
         className="formField"
         fullWidth

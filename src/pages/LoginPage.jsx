@@ -47,7 +47,7 @@ export const LoginPage = ({ setIsAuth }) => {
           <input
             type="email"
             value={credentials.email}
-            placeholder="Name@gmail.com"
+            placeholder="Email@gmail.com"
             onChange={(e) =>
               setCredentials({
                 email: e.target.value,
