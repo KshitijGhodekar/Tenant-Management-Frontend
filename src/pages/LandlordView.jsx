@@ -40,6 +40,10 @@ const LandlordDashboard = () => {
     setShowModal(true); 
   };
 
+  const handleProfile = () => {
+    navigate('/landlord-profile')
+  };
+
   const handleCloseModal = () => {
     setShowModal(false); 
   };
@@ -48,9 +52,14 @@ const LandlordDashboard = () => {
     <div className="dashboardContainer">
       <div className="header">
         <h2>Landlord Dashboard</h2>
+        <div style={{display:'flex',gap:'1em'}}>
+        <Button onClick={handleProfile} className="addPropertyBtn">
+          Profile
+        </Button>
         <Button onClick={handleAddProperty} className="addPropertyBtn">
           Add Property
         </Button>
+        </div>
       </div>
 
       <div className="dashboardContent">
