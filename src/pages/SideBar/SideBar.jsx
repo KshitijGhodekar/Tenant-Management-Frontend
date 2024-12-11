@@ -292,8 +292,8 @@ const Sidebar = () => {
             </p>
 
             <p style={{ fontSize: "16px", marginBottom: "10px" }}>
-              <strong>VAT (23%):</strong> €
-              {calculateVAT(popupData.price, popupData.discount / 100, 0.23)}
+              <strong>VAT (20%):</strong> €
+              {calculateVAT(popupData.price, popupData.discount / 100, 0.20)}
             </p>
 
             <p
@@ -308,7 +308,7 @@ const Sidebar = () => {
               {calculateFinalPrice(
                 popupData.price,
                 popupData.discount / 100,
-                0.23
+                0.20
               )}
             </p>
 
